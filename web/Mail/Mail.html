@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <link rel="stylesheet" href="Mail.css"> <!-- Assuming an external CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome To The Evil Email Generator 😈📧</h1>
+    </header>
+
+    <!-- Home Section -->
+<section id="home">
+    <h2>What is the Evil Email Generator? 😈📧</h2>
+    <p>Ever wanted to send an email that makes people question their life choices? Or maybe you need an email so dramatic it could rival a soap opera? Whatever your email needs, the Evil Email Generator is here to make sure your words pack a punch. 💥</p>
+    <p>With this tool, you can craft emails that will leave your recipient both confused and amazed. 🧠💥 Simply provide your name, the professor’s name (or whoever you're emailing), and choose the tone that best represents your inner villain. 💀</p>
+    <p>Feel like roasting your professor? Maybe you need to throw a passive-aggressive shade in that absence email? Or how about requesting a grade with enough drama to get you an Oscar nomination? The Evil Email Generator is the perfect sidekick for all your email needs. 🎭🍿</p>
+    <p>No matter if you’re aiming for a friendly vibe, a professional touch, or something completely outrageous, our generator will help you send emails that *actually* stand out. 📩💣</p>
+    <p>Ready to spice up your email game? Think you can handle the sass, sarcasm, and total chaos we’re about to unleash? 💥 Then dive in and let’s generate the most *evil* email you’ve ever seen! 🔥😏</p>
+    <p>Time to let your email do the talking. Whether it’s sarcasm, drama, or just an outright comedy show, the Evil Email Generator is here to help you express yourself in the most *memorable* way possible. ✨</p>
+</section>
+
+<div class="outer-container">
+    <div class="form-section">
+        <h1>😈 Evil Email Generator 😈</h1>
+
+        <form id="email-form">
+            <input type="text" id="name" placeholder="Your Name 🤔" required>
+            <input type="text" id="college-name" placeholder="College Name 🏫" required>
+            <input type="text" id="professor-name" placeholder="Professor's Name 👩‍🏫👨‍🏫" required>
+
+            <select id="email-type">
+                <option value="feedback">Feedback 📝</option>
+                <option value="absence">Absence ❌</option>
+                <option value="assignment">Assignment Request 📚</option>
+                <option value="grade">Grade Inquiry 📊</option>
+                <option value="GroupStudy">Group Study Inquiry 🤓📖</option>
+            </select>
+
+            <select id="tone">
+                <option value="sarcastic">Sarcastic 😏</option>
+                <option value="dramatic">Dramatic 😱</option>
+                <option value="formal">Formal 💼</option>
+                <option value="lazy">Lazy 😴</option>
+                <option value="Extrem">Extreme 🤯</option>
+            </select>
+            <button type="submit">Generate Email ✉️</button>
+        </form>
+        
+        <button id="copy-btn" style="margin-top: 10px;">Copy Email 📋</button>
+    </div>
+
+    <div class="generated-email-section">
+        <div id="generated-email" style="white-space: pre-wrap; margin-top: 20px;"></div>
+        
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<section id="faq">
+    <h2>Frequently Asked Questions 🤔</h2>
+    <ul>
+        <li><strong>Q:</strong> How does this tool work? <br><strong>A:</strong> Just enter your details, choose the email type and tone, and our generator will create the perfect email for you! 💥</li>
+        <li><strong>Q:</strong> Can I use this for real emails? <br><strong>A:</strong> While it's meant for fun, we recommend using it for fictional purposes or just to spice up your email game! 😏</li>
+        <li><strong>Q:</strong> Is this tool free to use? <br><strong>A:</strong> Yes, absolutely! No hidden fees, just pure email chaos. 😉</li>
+    </ul>
+</section>
+
+    
+    <script src="Mail.js"></script>
+</body>
+</html>

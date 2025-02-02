@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+  /* Header Section */
+header {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: white;
+    border: 2px solid black; /* Square border */
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.732); 
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 90%;
+    margin-left: auto; /* Centers the header */
+    margin-right: auto; /* Centers the header */
+    border-radius: 0px; /* Optional: rounded corners for a smooth effect */
+}
+
+  /* Header Title */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-transform: uppercase; /* Uppercase for more impact */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    position: relative;
+}
+
+  /* Before Emoji */
+header h1::before {
+    content: "🔥"; /* Added the fire emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+  /* After Emoji */
+header h1::after {
+    content: "😈"; /* Added the devil emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+  /* Highlight Span */
+header h1 span {
+    color: #FF5722; /* Highlight color */
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+}
+  /* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    /* Header Section */
+    header {
+        padding-left: 20px; /* Reduced padding for smaller screens */
+        padding-right: 20px; /* Reduced padding for smaller screens */
+        max-width: 95%; /* Increase width for mobile */
+    }
+
+    /* Header Title */
+    header h1 {
+        font-size: 1.8rem; /* Decrease font size for smaller screens */
+        letter-spacing: 2px; /* Reduce letter spacing for better readability */
+        margin-bottom: 15px; /* Reduced margin for compact layout */
+    }
+
+    /* Before Emoji */
+    header h1::before {
+        font-size: 2rem; /* Adjust emoji size for smaller screens */
+        left: -20px; /* Adjust position for mobile */
+    }
+
+    /* After Emoji */
+    header h1::after {
+        font-size: 2rem; /* Adjust emoji size for smaller screens */
+        right: -20px; /* Adjust position for mobile */
+    }
+}
+
+
+/* Home Section */
+#home {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 40px;
+    border: 2px solid black; /* Square border */
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.888); /* Shadow effect */
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px; /* Rounded corners for a smooth effect */
+    margin-bottom: 48px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+  /* Heading Style */
+#home h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    text-align: center;
+    position: relative;
+}
+
+  /* Paragraphs */
+#home p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify; /* Justified for neat alignment */
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow for text */
+}
+
+  /* Optional: Small tweaks to spacing */
+#home p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* Outer container for the entire layout */
+.outer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    height: 80vh;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+}
+
+/* Left side - Form section */
+.form-section {
+    width: 48%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+#email-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#email-form input,
+#email-form select,
+#email-form button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+#email-form input::placeholder,
+#email-form select {
+    color: #555;
+}
+
+/* Button styling for form */
+#email-form button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#email-form button:hover {
+    background-color: #f1f1f1;
+}
+
+/* Right side - Generated email section */
+.generated-email-section {
+    width: 48%;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 4px 4px rgb(0, 0, 0);
+    height: 100%;
+    overflow-y: auto; /* Makes the generated email scrollable */
+}
+
+/* Styling for generated email */
+#generated-email {
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 400px; /* You can adjust this value as needed */
+}
+
+/* Copy Button Styling */
+#copy-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#copy-btn:hover {
+    background-color: #f1f1f1;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .outer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .form-section, .generated-email-section {
+        width: 100%; /* Full width for both containers */
+        margin-bottom: 20px;
+        height: auto; /* Let the containers expand as needed */
+    }
+
+    /* Expanded form container size */
+    .form-section {
+        height: 350px; /* Increased height for form container */
+        padding: 30px; /* Extra padding for more spacing */
+        overflow-y: auto; /* Enable scrolling if content exceeds the height */
+    }
+
+    /* Adjust the generated email section to have enough space */
+    .generated-email-section {
+        height: 400px; /* Larger height for generated email section */
+        padding: 20px;
+        overflow-y: auto; /* Make the generated email section scrollable if content overflows */
+    }
+
+    /* Make the generated email text more readable */
+    #generated-email {
+        font-size: 18px; /* Increase font size */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    /* Adjust the copy button for better touch interaction */
+    #copy-btn {
+        font-size: 20px; /* Increase button size */
+        padding: 18px; /* Make button easier to interact with */
+    }
+
+    /* Title styling */
+    h1 {
+        font-size: 2rem; /* Increase title size */
+        margin-bottom: 25px;
+    }
+}
+
+/* Extra small screen adjustments */
+@media (max-width: 480px) {
+    .outer-container {
+        padding: 15px;
+    }
+
+    .form-section, .generated-email-section {
+        width: 100%;
+        margin-bottom: 15px;
+        height: auto; /* Ensure both containers expand as needed */
+    }
+
+    /* Expanded fixed height for form on very small screens */
+    .form-section {
+        height: 320px; /* Significantly increased height for form container */
+        padding: 25px; /* More padding for content */
+        overflow-y: auto; /* Enable scrolling if content exceeds the height */
+    }
+
+    /* Larger fixed height for generated email section on very small screens */
+    .generated-email-section {
+        height: 350px; /* Slightly increased height for generated email section */
+        padding: 20px;
+    }
+
+    #generated-email {
+        font-size: 20px; /* Increase font size for readability */
+    }
+
+    #copy-btn {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+/* Updated FAQ Section Styling */
+#faq {
+    background-color: white;
+    color: #333;
+    padding: 30px;
+    border: 2px solid black;  /* Black square border */
+    border-radius: 0px;  /* No rounded corners, square border */
+    max-width: 1400px;  /* Increased width */
+    margin: 40px auto;
+    box-shadow: 4px 4px  rgba(255, 255, 255, 0.205);  /* Adding shadow to the outside */
+    font-family: 'Arial', sans-serif;
+}
+
+#faq h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+#faq ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#faq li {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+#faq li strong {
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+#faq li br {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #faq {
+        padding: 20px;
+        max-width: 90%;  /* Adjust width for smaller screens */
+    }
+
+    #faq h2 {
+        font-size: 1.8rem;
+    }
+
+    #faq li {
+        padding: 10px;
+    }
+}

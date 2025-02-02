@@ -1,0 +1,330 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: white;
+  border: 2px solid black; /* Square border */
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.732); 
+  margin-top: 20px;
+  margin-bottom: 40px;
+  max-width: 90%;
+  margin-left: auto; /* Centers the header */
+  margin-right: auto; /* Centers the header */
+  border-radius: 0px; /* Optional: rounded corners for a smooth effect */
+}
+
+/* Header Title */
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  text-transform: uppercase; /* Uppercase for more impact */
+  font-family: 'Roboto', sans-serif; /* Clean, modern font */
+  position: relative;
+}
+
+/* Before Emoji */
+header h1::before {
+  content: "🔥"; /* Added the fire emoji */
+  font-size: 2.5rem;
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* After Emoji */
+header h1::after {
+  content: "😈"; /* Added the devil emoji */
+  font-size: 2.5rem;
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Highlight Span */
+header h1 span {
+  color: #FF5722; /* Highlight color */
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
+}
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  /* Header Section */
+  header {
+      padding-left: 20px; /* Reduced padding for smaller screens */
+      padding-right: 20px; /* Reduced padding for smaller screens */
+      max-width: 95%; /* Increase width for mobile */
+  }
+
+  /* Header Title */
+  header h1 {
+      font-size: 1.8rem; /* Decrease font size for smaller screens */
+      letter-spacing: 2px; /* Reduce letter spacing for better readability */
+      margin-bottom: 15px; /* Reduced margin for compact layout */
+  }
+
+  /* Before Emoji */
+  header h1::before {
+      font-size: 2rem; /* Adjust emoji size for smaller screens */
+      left: -20px; /* Adjust position for mobile */
+  }
+
+  /* After Emoji */
+  header h1::after {
+      font-size: 2rem; /* Adjust emoji size for smaller screens */
+      right: -20px; /* Adjust position for mobile */
+  }
+}
+
+
+
+/* Home Section */
+#home {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  padding: 40px;
+  border: 2px solid black; /* Square border */
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.888); /* Shadow effect */
+  max-width: 90%; 
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px; /* Rounded corners for a smooth effect */
+  margin-bottom: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Heading Style */
+#home h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Uppercase for emphasis */
+  text-align: center;
+  position: relative;
+}
+
+/* Paragraphs */
+#home p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify; /* Justified for neat alignment */
+  font-weight: 400;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow for text */
+}
+
+/* Optional: Small tweaks to spacing */
+#home p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* Generator Section */
+#generator {
+  text-align: center;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  background-color: white;
+  border: 2px solid black; /* Square border */
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Heading and Form */
+#generator h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#generator p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Form Elements */
+#userForm input,
+#userForm button {
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 2px solid black;
+  box-shadow: 3px 3px rgb(0, 0, 0);
+  border-radius: 0px;
+}
+
+#userForm button {
+  cursor: pointer;
+  background-color: white;
+  font-weight: bold;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Individual Button Styles */
+#generateBtn, #tryAgainBtn {
+  width: 48%; /* Ensures buttons take up almost half of the container */
+  display: inline-block; /* Display side by side */
+}
+
+#generateBtn {
+  background-color: #FF5722; /* Highlight color for generate button */
+  color: white;
+}
+
+#tryAgainBtn {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+/* Output Section */
+#output {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid black;
+  box-shadow: 4px 4px rgb(0, 0, 0);
+  font-size: 1.3rem;
+  max-width: 80%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  /* Generator Section */
+  #generator {
+      padding: 20px; /* Reduced padding for mobile */
+      max-width: 95%; /* Increased width for mobile devices */
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  /* Heading Style */
+  #generator h2 {
+      font-size: 1.8rem; /* Slightly smaller heading for mobile */
+      letter-spacing: 1.5px; /* Adjusted letter spacing for smaller screens */
+      text-align: center; /* Ensure it's centered */
+  }
+
+  /* Paragraph Text */
+  #generator p {
+      font-size: 1.1rem; /* Adjust paragraph font size for readability */
+      text-align: center; /* Center the paragraph */
+      margin-bottom: 20px; /* Reduced margin for compactness */
+  }
+
+  /* Form Inputs */
+  #userForm input {
+      width: 100%; /* Full width inputs for better mobile view */
+      padding: 12px; /* Increased padding for better touch area */
+      font-size: 1rem; /* Adjusted font size for easier input */
+      margin-bottom: 12px; /* Space between inputs */
+  }
+
+  /* Buttons */
+  #userForm button {
+      width: 100%; /* Full width for buttons to make them more accessible */
+      padding: 12px;
+      font-size: 1.1rem; /* Adjusted button text size */
+      margin-bottom: 12px; /* Space between buttons */
+  }
+
+  /* Output Section */
+  #output {
+      font-size: 1.2rem; /* Increased font size for output on mobile */
+      margin-top: 20px; /* Added margin for better spacing */
+      text-align: center; /* Center the output text */
+  }
+
+  /* Try Again Button */
+  #tryAgainBtn {
+      display: block; /* Make the Try Again button visible */
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+  }
+}
+
+
+
+
+/* Updated FAQ Section Styling */
+#faq {
+  background-color: white;
+  color: #333;
+  padding: 30px;
+  border: 2px solid black;  /* Black square border */
+  border-radius: 0px;  /* No rounded corners, square border */
+  max-width: 1400px;  /* Increased width */
+  margin: 40px auto;
+  box-shadow: 4px 4px  rgba(255, 255, 255, 0.205);  /* Adding shadow to the outside */
+  font-family: 'Arial', sans-serif;
+}
+
+#faq h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2C3E50;
+  margin-bottom: 20px;
+}
+
+#faq ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#faq li {
+  margin-bottom: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+#faq li strong {
+  font-weight: bold;
+  color: #2C3E50;
+}
+
+#faq li br {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  #faq {
+      padding: 20px;
+      max-width: 90%;  /* Adjust width for smaller screens */
+  }
+
+  #faq h2 {
+      font-size: 1.8rem;
+  }
+
+  #faq li {
+      padding: 10px;
+  }
+}

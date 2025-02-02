@@ -1,0 +1,387 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    color: black;
+    flex-direction: column;
+}
+
+.courtroom {
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    border: 3px solid black;
+    box-shadow: 4px 4px rgb(0, 0, 0);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+#allegation-text {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.options-container button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 0px;
+    box-shadow: 4px 4px black;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options-container button:hover {
+    background-color: #f0f0f0;
+}
+
+#another-allegation-btn {
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#another-allegation-btn:hover {
+    background-color: #f0f0f0;
+}
+#next-btn {
+    align-items: center;
+    padding: 12px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: #f0f0f0;
+}
+
+#verdict {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+}
+
+.feedback {
+    font-size: 16px;
+    color: black;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+/* Header Section */
+header {
+    border: 2px solid black;
+    border-radius: 0%;
+    box-shadow: 4px 4px black;
+    box-sizing: border-box;
+    text-align: center;
+    padding-left: 25.5%;
+    padding-right: 25.5%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    background-color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 120%;
+    margin-left: auto; /* Centers the header */
+    margin-right: auto;  /* Optional: rounded corners for a smooth effect */
+}
+
+/* Header Title */
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    text-transform: uppercase; /* Uppercase for more impact */
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    position: relative;
+}
+
+
+/* Before Emoji */
+header h1::before {
+    content: "🏛️"; /* Added the fire emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    left: -220px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+  /* After Emoji */
+header h1::after {
+    content: "⚔️ "; /* Added the devil emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    right: -220px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    /* Header Section */
+    header {
+        padding-left: 20px; /* Reduced padding for smaller screens */
+        padding-right: 20px; /* Reduced padding for smaller screens */
+        max-width: 95%; /* Increase width for mobile */
+    }
+
+    /* Header Title */
+    header h1 {
+        font-size: 1.8rem; /* Decrease font size for smaller screens */
+        letter-spacing: 2px; /* Reduce letter spacing for better readability */
+        margin-bottom: 15px; /* Reduced margin for compact layout */
+    }
+
+    /* Before Emoji */
+    header h1::before {
+        font-size: 2rem; /* Adjust emoji size for smaller screens */
+        left: -20px; /* Adjust position for mobile */
+    }
+
+    /* After Emoji */
+    header h1::after {
+        font-size: 2rem; /* Adjust emoji size for smaller screens */
+        right: -20px; /* Adjust position for mobile */
+    }
+}
+
+/* Home Section */
+#home {
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    padding: 40px;
+    border: 2px solid black; /* Square border */
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.888); /* Shadow effect */
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0px; /* Rounded corners for a smooth effect */
+    margin-bottom: 110px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Heading Style */
+#home h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    text-align: center;
+    position: relative;
+}
+
+/* Paragraphs */
+#home p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify; /* Justified for neat alignment */
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Soft shadow for text */
+}
+
+/* Optional: Small tweaks to spacing */
+#home p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* Updated FAQ Section Styling */
+#faq {
+    text-align: start;
+    padding-top: 2%;
+    background-color: white;
+    color: #333;
+    padding-left: 250PX;
+    padding-right: 250px;
+    align-items: flex-start;
+    border: 2px solid black;  /* Black square border */
+    border-radius: 0px;  /* No rounded corners, square border */
+    max-width: 1400px;  /* Increased width */
+    margin: 40px auto;
+    box-shadow: 4px 4px  rgba(255, 255, 255, 0.205);  /* Adding shadow to the outside */
+    font-family: 'Arial', sans-serif;
+}
+
+#faq h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 20px;
+}
+
+#faq ul {
+    align-items: flex-start;
+    text-align: start;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#faq li {
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+#faq li strong {
+    align-items: flex-start;
+    text-align: start;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+#faq li br {
+    margin-bottom: 10px;
+}
+
+
+/* Perfect Media Query for All Screen Sizes */
+@media (max-width: 1024px) {
+    .courtroom {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    header {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    #home, #faq {
+        max-width: 95%;
+        padding: 25px;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .options-container button,
+    #another-allegation-btn,
+    #next-btn {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courtroom {
+        width: 95%;
+        padding: 10px;
+    }
+
+    header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #home{
+        max-width: 98%;
+        padding: 20px;
+    }
+
+    #home h2 {
+        font-size: 1.6rem;
+    }
+
+    
+
+    .options-container button,
+    #another-allegation-btn,
+    #next-btn {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .courtroom {
+        width: 100%;
+        padding: 5px;
+        border-width: 2px;
+    }
+
+    header {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #home{
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #home h2 {
+        font-size: 1.4rem;
+    }
+
+    .options-container button,
+    #another-allegation-btn,
+    #next-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
