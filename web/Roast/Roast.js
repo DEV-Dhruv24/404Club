@@ -197,7 +197,7 @@ tryAgainBtn.addEventListener("click", () => {
         generateResponse();
     } else {
         // After 5 attempts, display the "try again by refreshing" message
-        output.innerHTML = "<h3>You've hit the 5-try limit! Maybe today just isn't your lucky day... Try again by refreshing the page. You never know, fate might be on your side next time! 🍀🤞💔</h3>";
+        output.innerHTML = "<h3>You've hit your limit! Maybe today just isn't your lucky day...But try again by refreshing the page. You never know ! 🍀🤞💔</h3>";
         tryAgainBtn.style.display = "none"; // Hide the button after 5 tries
     }
 });
