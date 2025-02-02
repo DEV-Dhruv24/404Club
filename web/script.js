@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let message = document.getElementById("message").value;
 
         // Your email (recipient)
-        let myEmail = "dhruvthakar644@gmail.com"; // Change to your email
+        let myEmail = "4o4club24@gmail.com"; // Change to your email
 
         // Construct mailto link
         let subject = encodeURIComponent(`New Message from ${name}`);
